@@ -9,64 +9,75 @@
         :root { --gold: #FFD700; --dark: #0a0a0a; --green: #25D366; --glass: rgba(255, 255, 255, 0.05); }
         body { background: var(--dark); color: #fff; font-family: 'Segoe UI', sans-serif; margin: 0; text-align: center; }
 
-        /* Premium Header */
         .header { background: linear-gradient(180deg, #1a1a1a, #000); padding: 30px 20px; border-bottom: 2px solid var(--gold); }
         .logo { font-size: 32px; font-weight: 900; color: var(--gold); letter-spacing: 2px; text-transform: uppercase; margin: 0; }
-        .owner-badge { background: var(--gold); color: #000; padding: 5px 15px; border-radius: 20px; font-size: 12px; font-weight: bold; margin-top: 10px; display: inline-block; }
+        
+        /* Owner Official Section */
+        .owner-section { background: #111; padding: 15px; border-bottom: 1px solid #333; }
+        .owner-badge { background: var(--gold); color: #000; padding: 5px 20px; border-radius: 20px; font-size: 14px; font-weight: 900; display: inline-block; margin-bottom: 5px; }
+        .owner-num { font-size: 20px; color: #fff; font-weight: bold; display: block; letter-spacing: 1px; }
 
-        /* Real-time Status */
-        .live-status { color: #ff3e3e; font-size: 12px; margin: 15px 0; font-weight: bold; }
-        .dot { height: 8px; width: 8px; background: #ff3e3e; border-radius: 50%; display: inline-block; animation: blink 1s infinite; margin-right: 5px; }
-        @keyframes blink { 50% { opacity: 0; } }
+        /* Professional Live Result Chart */
+        .chart-container { margin: 20px 15px; border: 1px solid #333; border-radius: 15px; overflow: hidden; background: #111; }
+        .chart-header { background: #222; color: var(--gold); padding: 10px; font-weight: bold; border-bottom: 1px solid #333; }
+        .chart-row { display: flex; justify-content: space-between; padding: 15px; border-bottom: 1px solid #222; align-items: center; }
+        .chart-row:last-child { border-bottom: none; }
+        .m-info { text-align: left; }
+        .m-name { font-size: 16px; font-weight: bold; color: #fff; }
+        .m-time { font-size: 11px; color: #666; display: block; }
+        .m-res { font-size: 28px; font-weight: 900; color: #00ff00; text-shadow: 0 0 10px rgba(0,255,0,0.2); }
 
-        /* Results Grid - Neat & Clean */
-        .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; padding: 15px; }
-        .card { background: #151515; border: 1px solid #333; border-radius: 12px; padding: 15px; border-top: 2px solid var(--gold); }
-        .m-name { font-size: 14px; color: #888; font-weight: bold; }
-        .m-res { font-size: 32px; font-weight: 900; color: #00ff00; margin: 8px 0; }
-
-        /* SMART BOOKING FORM */
+        /* Form Styling */
         .booking-container { background: var(--glass); margin: 20px 15px; padding: 25px; border-radius: 20px; border: 1px solid var(--gold); text-align: left; }
         .form-title { font-size: 20px; font-weight: bold; color: var(--gold); text-align: center; margin-bottom: 20px; text-transform: uppercase; }
         .input-group { margin-bottom: 15px; }
         label { display: block; font-size: 13px; color: #aaa; margin-bottom: 5px; }
         select, input { width: 100%; padding: 12px; border-radius: 8px; border: 1px solid #444; background: #222; color: #fff; box-sizing: border-box; font-size: 16px; }
 
-        /* UPI Payment QR Area */
-        .qr-section { text-align: center; background: #fff; padding: 15px; border-radius: 15px; margin: 20px 0; }
-        .qr-section p { color: #000; font-weight: bold; margin: 0 0 10px 0; font-size: 12px; }
+        /* Payment Instruction Box */
+        .pay-info { background: rgba(255, 215, 0, 0.05); border: 1px dashed var(--gold); padding: 15px; border-radius: 10px; margin: 20px 0; text-align: center; }
+        .pay-info p { margin: 5px 0; font-size: 13px; color: #fff; line-height: 1.4; }
+        .step-num { background: var(--gold); color: #000; width: 20px; height: 20px; display: inline-block; border-radius: 50%; font-weight: bold; font-size: 12px; margin-right: 5px; }
+
+        .submit-btn { width: 100%; background: var(--green); color: #fff; border: none; padding: 18px; border-radius: 50px; font-size: 18px; font-weight: bold; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 10px; box-shadow: 0 5px 20px rgba(37, 211, 102, 0.3); }
         
-        /* Submit Button */
-        .submit-btn { width: 100%; background: var(--green); color: #fff; border: none; padding: 18px; border-radius: 50px; font-size: 18px; font-weight: bold; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 10px; transition: 0.3s; }
-        .submit-btn:hover { transform: scale(1.02); }
-
-        /* Trust Reviews */
-        .review { background: #111; margin: 10px 15px; padding: 15px; border-radius: 10px; border-left: 4px solid var(--gold); text-align: left; }
-        .review p { font-size: 13px; color: #ccc; font-style: italic; margin: 0; }
-        .review-user { font-size: 11px; color: var(--gold); font-weight: bold; margin-top: 5px; display: block; }
-
-        .footer { padding: 40px 20px; font-size: 10px; color: #333; text-align: justify; }
+        .footer { padding: 40px 20px; font-size: 10px; color: #444; }
     </style>
 </head>
 <body>
 
 <div class="header">
     <h1 class="logo">KALRA JI KHAIWAL</h1>
-    <div class="owner-badge">Arvinder Singh Kalra</div>
-    <p style="color: #ccc; margin-top: 15px;">Imaandari Hamari Virasat, Speed Hamari Pehchaan</p>
 </div>
 
-<div class="live-status"><span class="dot"></span> <span id="live-users">512</span> Log Live Game Laga Rahe Hain</div>
+<div class="owner-section">
+    <div class="owner-badge"><i class="fas fa-check-circle"></i> VERIFIED TRUSTED KHAIWAL</div>
+    <span class="owner-num">ARVINDER SINGH KALRA</span>
+    <span style="color: var(--green); font-size: 18px; font-weight: bold;"><i class="fab fa-whatsapp"></i> 8199921698</span>
+</div>
 
-<div class="grid">
-    <div class="card"><div class="m-name">DESAWER</div><div class="m-res">68</div><div style="font-size:10px; color:#555;">05:00 AM</div></div>
-    <div class="card"><div class="m-name">FARIDABAD</div><div class="m-res">57</div><div style="font-size:10px; color:#555;">06:00 PM</div></div>
-    <div class="card"><div class="m-name">GHAZIABAD</div><div class="m-res">06</div><div style="font-size:10px; color:#555;">09:20 PM</div></div>
-    <div class="card"><div class="m-name">GALI</div><div class="m-res">97</div><div style="font-size:10px; color:#555;">11:20 PM</div></div>
+<div class="chart-container">
+    <div class="chart-header">LIVE RESULT CHART</div>
+    <div class="chart-row">
+        <div class="m-info"><span class="m-name">DESAWER</span><span class="m-time">Time: 05:00 AM</span></div>
+        <div class="m-res">68</div>
+    </div>
+    <div class="chart-row">
+        <div class="m-info"><span class="m-name">FARIDABAD</span><span class="m-time">Time: 06:00 PM</span></div>
+        <div class="m-res">57</div>
+    </div>
+    <div class="chart-row">
+        <div class="m-info"><span class="m-name">GHAZIABAD</span><span class="m-time">Time: 09:20 PM</span></div>
+        <div class="m-res">06</div>
+    </div>
+    <div class="chart-row">
+        <div class="m-info"><span class="m-name">GALI</span><span class="m-time">Time: 11:20 PM</span></div>
+        <div class="m-res">97</div>
+    </div>
 </div>
 
 <div class="booking-container">
-    <div class="form-title">Direct Game Booking</div>
+    <div class="form-title">Game Booking Karein</div>
     
     <div class="input-group">
         <label>Market Chunein:</label>
@@ -82,42 +93,32 @@
 
     <div class="input-group">
         <label>Jodi / Haruf Number:</label>
-        <input type="number" id="number" placeholder="Eg: 45">
+        <input type="number" id="number" placeholder="Number Likhein">
     </div>
 
     <div class="input-group">
-        <label>Kitne ka khelna hai? (Amount):</label>
-        <input type="number" id="amount" placeholder="Eg: 100">
+        <label>Amount (Kitne ki lagani hai):</label>
+        <input type="number" id="amount" placeholder="Paisa Likhein (Eg: 500)">
     </div>
 
-    <div class="qr-section">
-        <p>SCAN TO PAY (UPI)</p>
-        <img id="qr-code" src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=upi://pay?pa=8199921698@paytm&pn=Arvinder%20Singh&am=0" style="width: 150px;">
-        <p style="color: #666; font-size: 10px; margin-top: 5px;">UPI ID: 8199921698@paytm</p>
+    <div class="pay-info">
+        <p><span class="step-num">1</span> Details bhar kar "SUBMIT" karein.</p>
+        <p><span class="step-num">2</span> WhatsApp par humse **QR Code** maangein.</p>
+        <p><span class="step-num">3</span> Payment karke **Screenshot** bhejein.</p>
+        <p style="color: var(--gold); font-weight: bold; margin-top: 5px;">⚠️ Payment Confirm hote hi Game OK hogi.</p>
     </div>
 
     <button class="submit-btn" onclick="submitGame()">
-        <i class="fab fa-whatsapp"></i> SUBMIT TO WHATSAPP
+        <i class="fab fa-whatsapp"></i> SUBMIT & GET QR CODE
     </button>
 </div>
 
-<div class="review">
-    <p>"Kalra Ji ka rate aur payment speed poore market mein sabse best hai. No. 1 Khaiwal!"</p>
-    <span class="review-user">- Sukhwinder from Ludhiana</span>
-</div>
-
 <div class="footer">
-    Disclaimer: Yeh website keval 18+ varsh ke vyaktiyon ke liye hai aur manoranjan ke uddeshya se banayi gayi hai. Hum kisi bhi illegal gatividhi ka samarthan nahi karte. Kalra Ji Khaiwal ek trusted brand hai jo imaandari mein vishwas rakhta hai.
+    © 2026 Arvinder Singh Kalra Official <br>
+    India's Most Trusted Online Khaiwal System.
 </div>
 
 <script>
-    // Live User Counter
-    setInterval(() => {
-        let count = Math.floor(Math.random() * (580 - 460) + 460);
-        document.getElementById('live-users').innerText = count;
-    }, 3000);
-
-    // WhatsApp Booking Logic
     function submitGame() {
         const market = document.getElementById('market').value;
         const number = document.getElementById('number').value;
@@ -128,7 +129,7 @@
             return;
         }
 
-        const msg = `Namaste Arvinder Ji, %0AMaine Website se Game Lagayi Hai:%0A%0A🎯 Market: ${market}%0A🔢 Number: ${number}%0A💰 Amount: ${amount}%0A✅ Payment Done. %0A%0AKripya Ok karein!`;
+        const msg = `Namaste Kalra Ji, %0AMaine Website se Game Lagayi Hai:%0A%0A🎯 Market: ${market}%0A🔢 Number: ${number}%0A💰 Amount: ${amount}%0A%0A✅ Mujhe Payment ke liye QR Code bhejein.`;
         
         window.location.href = `https://wa.me/918199921698?text=${msg}`;
     }
