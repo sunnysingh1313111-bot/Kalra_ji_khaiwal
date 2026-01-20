@@ -3,111 +3,100 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kalra Ji Khaiwal | Arvinder Singh Kalra | Trusted Online Khaiwal</title>
+    <title>Kalra Ji Khaiwal | Arvinder Singh Kalra | Trusted No.1</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        :root { --gold: #D4AF37; --dark: #0a0a0a; --green: #25D366; --glass: rgba(255, 255, 255, 0.05); }
-        body { background-color: var(--dark); color: white; font-family: 'Poppins', sans-serif; margin: 0; padding: 0; overflow-x: hidden; }
+        :root { --gold: #FFD700; --dark-bg: #0a0a0a; --whatsapp: #25D366; --red: #ff3131; }
+        body { background-color: var(--dark-bg); color: #fff; font-family: 'Poppins', sans-serif; margin: 0; text-align: center; }
+
+        /* Floating Notification Box */
+        #payment-notif { position: fixed; top: 80px; left: 10px; background: rgba(0,0,0,0.8); border: 1px solid var(--gold); padding: 5px 15px; border-radius: 20px; font-size: 10px; color: var(--gold); z-index: 1000; display: none; transition: 0.5s; }
+
+        .header { background: #000; padding: 20px; border-bottom: 3px solid var(--gold); box-shadow: 0 5px 15px rgba(0,0,0,0.5); }
+        .logo { font-size: 30px; font-weight: 900; color: var(--gold); text-shadow: 0 0 10px rgba(255,215,0,0.3); }
         
-        /* Header Section */
-        .header { background: linear-gradient(145deg, #1a1a1a, #000); padding: 20px; border-bottom: 3px solid var(--gold); position: sticky; top: 0; z-index: 100; }
-        .brand-name { font-size: 26px; font-weight: 800; color: var(--gold); letter-spacing: 2px; text-transform: uppercase; }
-        .owner-info { color: #aaa; font-size: 12px; margin-top: 5px; letter-spacing: 1px; }
+        /* Live Users Counter */
+        .live-counter { background: rgba(255,0,0,0.1); color: var(--red); font-size: 12px; padding: 5px; display: inline-block; border-radius: 5px; margin: 10px 0; border: 1px solid var(--red); }
+        .dot { height: 8px; width: 8px; background-color: var(--red); border-radius: 50%; display: inline-block; animation: blink 1s infinite; }
 
-        /* Trust Stats Bar */
-        .stats-bar { display: flex; justify-content: space-around; background: #111; padding: 10px 0; border-bottom: 1px solid #333; font-size: 11px; color: var(--gold); font-weight: bold; }
+        .result-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; padding: 10px; }
+        .card { background: #1a1a1a; border: 1px solid #333; border-radius: 10px; padding: 15px; border-top: 2px solid var(--gold); }
+        .res-num { font-size: 28px; font-weight: 900; color: #00ff00; margin-top: 5px; }
+
+        .rate-card { background: linear-gradient(135deg, #111 0%, #222 100%); margin: 15px; padding: 20px; border-radius: 15px; border: 1px solid var(--gold); }
+        .rate-row { display: flex; justify-content: space-between; font-size: 18px; font-weight: bold; padding: 10px 0; border-bottom: 1px dashed #444; }
+
+        .payment-methods { display: flex; justify-content: center; gap: 15px; margin: 20px 0; opacity: 0.7; font-size: 20px; }
+
+        .whatsapp-btn { position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%); width: 90%; background: var(--whatsapp); color: white; padding: 18px; border-radius: 50px; text-decoration: none; font-size: 20px; font-weight: bold; box-shadow: 0 10px 30px rgba(0,0,0,0.8); z-index: 1000; display: flex; align-items: center; justify-content: center; gap: 10px; animation: pulse 1.5s infinite; }
+
+        @keyframes blink { 0% { opacity: 1; } 50% { opacity: 0.3; } 100% { opacity: 1; } }
+        @keyframes pulse { 0% { transform: translateX(-50%) scale(1); } 50% { transform: translateX(-50%) scale(1.03); } 100% { transform: translateX(-50%) scale(1); } }
         
-        /* Main Section */
-        .hero { padding: 30px 15px; background: radial-gradient(circle at center, #222 0%, #000 100%); }
-        .update-time { font-size: 12px; color: #00ff00; background: rgba(0,255,0,0.1); padding: 5px 15px; border-radius: 20px; display: inline-block; margin-bottom: 15px; }
-
-        /* Premium Rate Card */
-        .rate-card { background: var(--glass); border: 2px solid var(--gold); border-radius: 20px; padding: 25px; margin: 10px auto; width: 85%; position: relative; box-shadow: 0 0 20px rgba(212,175,55,0.2); }
-        .rate-card::before { content: "TOP RATE"; position: absolute; top: -12px; left: 50%; transform: translateX(-50%); background: var(--gold); color: black; padding: 2px 15px; border-radius: 10px; font-size: 10px; font-weight: bold; }
-        .rate-row { display: flex; justify-content: space-between; margin: 10px 0; font-size: 20px; font-weight: bold; border-bottom: 1px solid #333; padding-bottom: 10px; }
-        .gold-text { color: var(--gold); }
-
-        /* Result Table */
-        .result-container { width: 95%; margin: 25px auto; background: #111; border-radius: 15px; overflow: hidden; border: 1px solid #333; }
-        .result-table { width: 100%; border-collapse: collapse; }
-        .result-table th { background: var(--gold); color: black; padding: 12px; font-size: 14px; }
-        .result-table td { padding: 15px; border-bottom: 1px solid #222; font-size: 18px; font-weight: 500; }
-        .win-num { color: #00ff00; font-weight: 800; font-size: 24px; text-shadow: 0 0 10px rgba(0,255,0,0.3); }
-
-        /* Trust & Security Badges */
-        .badge-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; padding: 20px; }
-        .badge-item { background: #1a1a1a; padding: 15px; border-radius: 10px; border-left: 3px solid var(--gold); display: flex; align-items: center; gap: 10px; font-size: 12px; text-align: left; }
-        .badge-item i { color: var(--gold); font-size: 20px; }
-
-        /* Hidden SEO Disclaimer */
-        .hidden-disclaimer { opacity: 0.2; font-size: 10px; padding: 40px 20px; text-align: justify; filter: blur(0.5px); color: #444; }
-        .hidden-disclaimer:hover { opacity: 1; filter: none; color: #888; }
-
-        /* WhatsApp Button */
-        .wa-btn { position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%); width: 92%; background: linear-gradient(45deg, #25D366, #128C7E); color: white; padding: 18px; border-radius: 50px; text-decoration: none; font-size: 19px; font-weight: bold; display: flex; align-items: center; justify-content: center; gap: 10px; box-shadow: 0 10px 30px rgba(37,211,102,0.4); z-index: 1000; animation: bounce 2s infinite; }
-        @keyframes bounce { 0%, 100% { transform: translateX(-50%) translateY(0); } 50% { transform: translateX(-50%) translateY(-10px); } }
-
-        .footer { padding-bottom: 110px; color: #444; font-size: 12px; }
+        /* Hidden SEO Text */
+        .seo-hide { font-size: 10px; color: #111; padding: 50px 20px; text-align: justify; }
     </style>
 </head>
 <body>
 
+<div id="payment-notif">Aman from Delhi won ₹1900/- 💰</div>
+
 <div class="header">
-    <div class="brand-name">KALRA JI KHAIWAL</div>
-    <div class="owner-info">ADMIN: ARVINDER SINGH KALRA</div>
+    <div class="logo">KALRA JI KHAIWAL</div>
+    <div style="font-size: 12px; color: #888;">Owner: Arvinder Singh Kalra</div>
 </div>
 
-<div class="stats-bar">
-    <div><i class="fas fa-check-circle"></i> VERIFIED BOOK</div>
-    <div><i class="fas fa-history"></i> 15 MIN PAYOUT</div>
-    <div><i class="fas fa-shield-alt"></i> 100% SAFE</div>
+<div class="live-counter">
+    <span class="dot"></span> <span id="user-count">482</span> Log Abhi Live Hain
 </div>
 
-<div class="hero">
-    <div class="update-time"><i class="fas fa-clock"></i> Last Updated: Aaj ka Result live</div>
-    
-    <h2 style="font-size: 20px; margin-bottom: 25px;">Imaandari Hamari Virasat, <br><span class="gold-text">Speed Hamari Pehchaan</span></h2>
-
-    <div class="rate-card">
-        <div class="rate-row"><span>JODI</span> <span class="gold-text">10 ka 950/-</span></div>
-        <div class="rate-row"><span>HARUF</span> <span class="gold-text">100 ka 950/-</span></div>
-        <p style="font-size: 12px; color: #888; margin-top: 15px;">PhonePe | Google Pay | Paytm | UPI</p>
-    </div>
+<div class="result-grid">
+    <div class="card"><div>DESAWER</div><div style="font-size: 10px; color: #888;">05:00 AM</div><div class="res-num">68</div></div>
+    <div class="card"><div>FARIDABAD</div><div style="font-size: 10px; color: #888;">06:00 PM</div><div class="res-num">57</div></div>
+    <div class="card"><div>GHAZIABAD</div><div style="font-size: 10px; color: #888;">09:20 PM</div><div class="res-num">06</div></div>
+    <div class="card"><div>GALI</div><div style="font-size: 10px; color: #888;">11:20 PM</div><div class="res-num">97</div></div>
 </div>
 
-<div class="result-container">
-    <table class="result-table">
-        <thead>
-            <tr><th>MARKET</th><th>TIME</th><th>RESULT</th></tr>
-        </thead>
-        <tbody>
-            <tr><td>DESAWAR</td><td>05:00 AM</td><td class="win-num">45</td></tr>
-            <tr><td>FARIDABAD</td><td>06:00 PM</td><td class="win-num">12</td></tr>
-            <tr><td>GHAZIABAD</td><td>08:30 PM</td><td style="color: var(--gold);">Update Soon</td></tr>
-            <tr><td>GALI</td><td>11:30 PM</td><td style="color: var(--gold);">Waiting..</td></tr>
-        </tbody>
-    </table>
+<div class="rate-card">
+    <div style="color: var(--gold); font-size: 14px; margin-bottom: 10px;">🔥 BEST MARKET RATES 🔥</div>
+    <div class="rate-row"><span>JODI</span> <span style="color: var(--gold);">10 ka 950/-</span></div>
+    <div class="rate-row"><span>HARUF</span> <span style="color: var(--gold);">100 ka 950/-</span></div>
+    <div style="font-size: 11px; margin-top: 10px; color: #aaa;">Result ke 15 Minute mein Direct Payout</div>
 </div>
 
-<div class="badge-grid">
-    <div class="badge-item"><i class="fas fa-user-shield"></i> <div>Secure Account Handling</div></div>
-    <div class="badge-item"><i class="fas fa-money-bill-wave"></i> <div>No Limit Play - Big Payouts</div></div>
-    <div class="badge-item"><i class="fas fa-lock"></i> <div>Data 100% Confidential</div></div>
-    <div class="badge-item"><i class="fas fa-id-card"></i> <div>Real Admin: Arvinder Kalra</div></div>
+<div class="payment-methods">
+    <i class="fab fa-google-pay"></i> <i class="fab fa-apple-pay"></i> <i class="fas fa-wallet"></i> <i class="fas fa-university"></i>
 </div>
 
-<div class="hidden-disclaimer">
-    Disclaimer: Yeh website keval manoranjan aur prediction tips ke liye hai. Hum kisi bhi tarah ki illegal gambling ko promote nahi karte. Is page par diye gaye numbers keval guessing par adharit hain. 18 varsh se kam ayu ke vyakti isse door rahein. Yeh system software analysis par chalta hai aur hum imaandari se service dene mein vishwas rakhte hain. Kalra Ji Khaiwal ek trusted brand hai.
+<div class="seo-hide">
+    Online Khaiwal Kalra Ji, Satta King Online Khaiwal Gali Desawar result fast payment. Yeh site manoranjan ke liye hai. Satta king live result. Arvinder Singh Kalra trusted bookie.
 </div>
 
-<div class="footer">
-    <p>Ek baar khelein, baar-baar aayenge. Kalra Ji ka waada!</p>
-    <p>© 2024 Kalra Ji Khaiwal | All Rights Reserved</p>
-</div>
-
-<a href="https://wa.me/918199921698?text=Namaste%20Kalra%20Ji,%20Game%20Likhwao" class="wa-btn">
-    <i class="fab fa-whatsapp" style="font-size: 24px;"></i> WHATSAPP PAR GAME LAGAYEIN
+<a href="https://wa.me/918199921698?text=Namaste%20Kalra%20Ji,%20Game%20Likhwao" class="whatsapp-btn" onclick="vibrate()">
+    <i class="fab fa-whatsapp" style="font-size: 26px;"></i> WHATSAPP PAR GAME LAGAYEIN
 </a>
+
+<script>
+    // Live User Counter Simulation
+    setInterval(() => {
+        let count = Math.floor(Math.random() * (550 - 450) + 450);
+        document.getElementById('user-count').innerText = count;
+    }, 3000);
+
+    // Payment Notifications Simulation
+    const names = ["Rajesh", "Aman", "Lucky", "Vicky", "Deepak", "Sahil"];
+    const amounts = ["950", "1900", "4750", "9500", "500"];
+    setInterval(() => {
+        let notif = document.getElementById('payment-notif');
+        let name = names[Math.floor(Math.random()*names.length)];
+        let amt = amounts[Math.floor(Math.random()*amounts.length)];
+        notif.innerText = `${name} won ₹${amt}/- 💰`;
+        notif.style.display = 'block';
+        setTimeout(() => { notif.style.display = 'none'; }, 3000);
+    }, 8000);
+
+    function vibrate() { if(navigator.vibrate) navigator.vibrate(50); }
+</script>
 
 </body>
 </html>
