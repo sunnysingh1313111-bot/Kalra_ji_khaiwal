@@ -3,134 +3,118 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kalra Ji Khaiwal | Arvinder Singh Kalra | Trusted No.1</title>
+    <title>Kalra Ji Khaiwal | Arvinder Singh Kalra Official</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        :root { --gold: #FFD700; --dark: #0a0a0a; --green: #25D366; --glass: rgba(255, 255, 255, 0.05); }
-        body { background: var(--dark); color: #fff; font-family: 'Segoe UI', sans-serif; margin: 0; text-align: center; }
+        :root { --gold: #FFD700; --dark: #000000; --green: #25D366; --red: #ff3131; }
+        body { background: var(--dark); color: #fff; font-family: 'Arial', sans-serif; margin: 0; padding: 0; text-align: center; }
 
-        .header { background: linear-gradient(180deg, #1a1a1a, #000); padding: 30px 20px; border-bottom: 2px solid var(--gold); }
-        .logo { font-size: 32px; font-weight: 900; color: var(--gold); letter-spacing: 2px; text-transform: uppercase; margin: 0; }
+        /* Top Header */
+        .top-header { background: #111; padding: 25px 10px; border-bottom: 4px solid var(--gold); }
+        .main-logo { font-size: 28px; font-weight: 900; color: var(--gold); text-transform: uppercase; margin: 0; letter-spacing: 1.5px; }
+        .tagline-top { color: #fff; font-size: 16px; font-weight: bold; margin-top: 10px; display: block; }
+
+        /* Scrolling News */
+        .news-ticker { background: var(--red); color: white; padding: 8px 0; font-weight: bold; font-size: 14px; border-top: 1px solid #fff; }
+
+        /* Professional Chart (As per Image) */
+        .chart-box { margin: 20px 4%; background: #0c0c0c; border: 2px solid #333; border-radius: 12px; overflow: hidden; box-shadow: 0 0 15px rgba(255, 215, 0, 0.1); }
+        .chart-title { background: var(--gold); color: #000; padding: 15px; font-size: 20px; font-weight: 900; }
         
-        /* Owner Official Section */
-        .owner-section { background: #111; padding: 15px; border-bottom: 1px solid #333; }
-        .owner-badge { background: var(--gold); color: #000; padding: 5px 20px; border-radius: 20px; font-size: 14px; font-weight: 900; display: inline-block; margin-bottom: 5px; }
-        .owner-num { font-size: 20px; color: #fff; font-weight: bold; display: block; letter-spacing: 1px; }
-
-        /* Professional Live Result Chart */
-        .chart-container { margin: 20px 15px; border: 1px solid #333; border-radius: 15px; overflow: hidden; background: #111; }
-        .chart-header { background: #222; color: var(--gold); padding: 10px; font-weight: bold; border-bottom: 1px solid #333; }
-        .chart-row { display: flex; justify-content: space-between; padding: 15px; border-bottom: 1px solid #222; align-items: center; }
-        .chart-row:last-child { border-bottom: none; }
-        .m-info { text-align: left; }
-        .m-name { font-size: 16px; font-weight: bold; color: #fff; }
-        .m-time { font-size: 11px; color: #666; display: block; }
-        .m-res { font-size: 28px; font-weight: 900; color: #00ff00; text-shadow: 0 0 10px rgba(0,255,0,0.2); }
-
-        /* Form Styling */
-        .booking-container { background: var(--glass); margin: 20px 15px; padding: 25px; border-radius: 20px; border: 1px solid var(--gold); text-align: left; }
-        .form-title { font-size: 20px; font-weight: bold; color: var(--gold); text-align: center; margin-bottom: 20px; text-transform: uppercase; }
-        .input-group { margin-bottom: 15px; }
-        label { display: block; font-size: 13px; color: #aaa; margin-bottom: 5px; }
-        select, input { width: 100%; padding: 12px; border-radius: 8px; border: 1px solid #444; background: #222; color: #fff; box-sizing: border-box; font-size: 16px; }
-
-        /* Payment Instruction Box */
-        .pay-info { background: rgba(255, 215, 0, 0.05); border: 1px dashed var(--gold); padding: 15px; border-radius: 10px; margin: 20px 0; text-align: center; }
-        .pay-info p { margin: 5px 0; font-size: 13px; color: #fff; line-height: 1.4; }
-        .step-num { background: var(--gold); color: #000; width: 20px; height: 20px; display: inline-block; border-radius: 50%; font-weight: bold; font-size: 12px; margin-right: 5px; }
-
-        .submit-btn { width: 100%; background: var(--green); color: #fff; border: none; padding: 18px; border-radius: 50px; font-size: 18px; font-weight: bold; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 10px; box-shadow: 0 5px 20px rgba(37, 211, 102, 0.3); }
+        .t-head { display: grid; grid-template-columns: 1.4fr 1fr 1fr; background: #222; padding: 12px 5px; color: var(--gold); font-weight: bold; font-size: 13px; border-bottom: 2px solid #333; }
+        .t-row { display: grid; grid-template-columns: 1.4fr 1fr 1fr; border-bottom: 1px solid #222; align-items: center; padding: 15px 5px; }
+        .t-row:nth-child(even) { background: #050505; }
         
-        .footer { padding: 40px 20px; font-size: 10px; color: #444; }
+        .n-cell { text-align: left; padding-left: 15px; font-weight: bold; color: #fff; font-size: 15px; }
+        .t-cell { color: #aaa; font-size: 12px; font-weight: bold; }
+        .r-cell { font-size: 34px; font-weight: 900; color: #00ff00; text-shadow: 0 0 10px rgba(0,255,0,0.3); }
+
+        /* Owner Identity Box */
+        .owner-card { background: #111; border: 1px solid var(--gold); margin: 20px 4%; padding: 25px; border-radius: 15px; box-shadow: inset 0 0 10px rgba(255, 215, 0, 0.1); }
+        .o-name { font-size: 24px; font-weight: 900; color: #fff; text-transform: uppercase; }
+        .o-num { font-size: 28px; font-weight: 900; color: var(--green); margin-top: 15px; display: block; letter-spacing: 1px; }
+
+        /* Booking Form */
+        .booking-card { background: #151515; margin: 25px 4%; padding: 25px; border-radius: 20px; border: 1px solid #333; text-align: left; }
+        .label-text { font-size: 12px; color: #888; font-weight: bold; margin-bottom: 5px; display: block; }
+        select, input { width: 100%; padding: 15px; border-radius: 10px; border: 1px solid #444; background: #222; color: #fff; margin-bottom: 20px; font-size: 16px; box-sizing: border-box; }
+
+        /* Big Button */
+        .btn-submit { width: 100%; background: var(--green); color: white; border: none; padding: 20px; border-radius: 50px; font-size: 20px; font-weight: 900; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 10px; box-shadow: 0 10px 20px rgba(0,0,0,0.4); text-decoration: none; }
+
+        .footer { padding: 40px 20px; font-size: 11px; color: #444; }
     </style>
 </head>
 <body>
 
-<div class="header">
-    <h1 class="logo">KALRA JI KHAIWAL</h1>
+<div class="top-header">
+    <h1 class="main-logo">KALRA JI KHAIWAL</h1>
+    <span class="tagline-top">👉 विश्वास का दूसरा नाम: कालरा जी 👈</span>
 </div>
 
-<div class="owner-section">
-    <div class="owner-badge"><i class="fas fa-check-circle"></i> VERIFIED TRUSTED KHAIWAL</div>
-    <span class="owner-num">ARVINDER SINGH KALRA</span>
-    <span style="color: var(--green); font-size: 18px; font-weight: bold;"><i class="fab fa-whatsapp"></i> 8199921698</span>
+<div class="news-ticker">
+    <marquee scrollamount="5">⚡ रिजल्ट खुलते ही 5 मिनट में पेमेंट मिलेगी, फुल ट्रस्टेड काम - कालरा जी ⚡</marquee>
 </div>
 
-<div class="chart-container">
-    <div class="chart-header">LIVE RESULT CHART</div>
-    <div class="chart-row">
-        <div class="m-info"><span class="m-name">DESAWER</span><span class="m-time">Time: 05:00 AM</span></div>
-        <div class="m-res">68</div>
+<div class="chart-box">
+    <div class="chart-title">👉 🕙 TIME TABLE 🕙 👈</div>
+    <div class="t-head">
+        <div>MARKET NAME</div>
+        <div>LAST TIME</div>
+        <div>RESULT</div>
     </div>
-    <div class="chart-row">
-        <div class="m-info"><span class="m-name">FARIDABAD</span><span class="m-time">Time: 06:00 PM</span></div>
-        <div class="m-res">57</div>
-    </div>
-    <div class="chart-row">
-        <div class="m-info"><span class="m-name">GHAZIABAD</span><span class="m-time">Time: 09:20 PM</span></div>
-        <div class="m-res">06</div>
-    </div>
-    <div class="chart-row">
-        <div class="m-info"><span class="m-name">GALI</span><span class="m-time">Time: 11:20 PM</span></div>
-        <div class="m-res">97</div>
+    <div class="t-row"><div class="n-cell">DELHI BAZAR</div><div class="t-cell">03:00 PM</div><div class="r-cell">--</div></div>
+    <div class="t-row"><div class="n-cell">SHREE GANESH</div><div class="t-cell">04:30 PM</div><div class="r-cell">--</div></div>
+    <div class="t-row"><div class="n-cell">FARIDABAD</div><div class="t-cell">05:50 PM</div><div class="r-cell">--</div></div>
+    <div class="t-row"><div class="n-cell">GHAZIABAD</div><div class="t-cell">08:30 PM</div><div class="r-cell">--</div></div>
+    <div class="t-row"><div class="n-cell">GALI</div><div class="t-cell">10:50 PM</div><div class="r-cell">--</div></div>
+    <div class="t-row"><div class="n-cell">DESAWER</div><div class="t-cell">02:00 AM</div><div class="r-cell">--</div></div>
+</div>
+
+<div class="owner-card">
+    <span class="o-name">ARVINDER SINGH KALRA</span>
+    <span class="o-num"><i class="fas fa-phone-alt"></i> 8199921698</span>
+    <div style="margin-top: 15px; color: var(--gold); font-weight: bold; font-size: 18px;">
+        रेट: जोड़ी 10 का 950 | हरूफ 100 का 950
     </div>
 </div>
 
-<div class="booking-container">
-    <div class="form-title">Game Booking Karein</div>
+<div class="booking-card">
+    <h3 style="color: var(--gold); text-align: center; margin-top: 0;">DIRECT GAME BOOKING</h3>
     
-    <div class="input-group">
-        <label>Market Chunein:</label>
-        <select id="market">
-            <option>DESAWER</option>
-            <option>FARIDABAD</option>
-            <option>GHAZIABAD</option>
-            <option>GALI</option>
-            <option>DELHI BAZAR</option>
-            <option>SHREE GANESH</option>
-        </select>
-    </div>
+    <span class="label-text">MARKET SELECT KAREIN:</span>
+    <select id="m">
+        <option>DELHI BAZAR</option>
+        <option>SHREE GANESH</option>
+        <option>FARIDABAD</option>
+        <option>GHAZIABAD</option>
+        <option>GALI</option>
+        <option>DESAWER</option>
+    </select>
 
-    <div class="input-group">
-        <label>Jodi / Haruf Number:</label>
-        <input type="number" id="number" placeholder="Number Likhein">
-    </div>
+    <span class="label-text">NUMBER LIKHEIN:</span>
+    <input type="number" id="n" placeholder="Eg: 88">
 
-    <div class="input-group">
-        <label>Amount (Kitne ki lagani hai):</label>
-        <input type="number" id="amount" placeholder="Paisa Likhein (Eg: 500)">
-    </div>
+    <span class="label-text">AMOUNT LIKHEIN (Rs):</span>
+    <input type="number" id="a" placeholder="Eg: 1000">
 
-    <div class="pay-info">
-        <p><span class="step-num">1</span> Details bhar kar "SUBMIT" karein.</p>
-        <p><span class="step-num">2</span> WhatsApp par humse **QR Code** maangein.</p>
-        <p><span class="step-num">3</span> Payment karke **Screenshot** bhejein.</p>
-        <p style="color: var(--gold); font-weight: bold; margin-top: 5px;">⚠️ Payment Confirm hote hi Game OK hogi.</p>
-    </div>
-
-    <button class="submit-btn" onclick="submitGame()">
-        <i class="fab fa-whatsapp"></i> SUBMIT & GET QR CODE
+    <button class="btn-submit" onclick="s()">
+        <i class="fab fa-whatsapp"></i> SUBMIT TO WHATSAPP
     </button>
 </div>
 
 <div class="footer">
-    © 2026 Arvinder Singh Kalra Official <br>
-    India's Most Trusted Online Khaiwal System.
+    "इमानदारी हमारी पहचान है" <br>
+    © 2026 Arvinder Singh Kalra. All Rights Reserved.
 </div>
 
 <script>
-    function submitGame() {
-        const market = document.getElementById('market').value;
-        const number = document.getElementById('number').value;
-        const amount = document.getElementById('amount').value;
-
-        if(!number || !amount) {
-            alert("Kripya Number aur Amount bharein!");
-            return;
-        }
-
-        const msg = `Namaste Kalra Ji, %0AMaine Website se Game Lagayi Hai:%0A%0A🎯 Market: ${market}%0A🔢 Number: ${number}%0A💰 Amount: ${amount}%0A%0A✅ Mujhe Payment ke liye QR Code bhejein.`;
-        
+    function s() {
+        const m = document.getElementById('m').value;
+        const n = document.getElementById('n').value;
+        const a = document.getElementById('a').value;
+        if(!n || !a) { alert("Bhai Number aur Amount bhariye!"); return; }
+        const msg = `Namaste Arvinder Ji, %0AMaine Game Laga Di Hai:%0A🎯 Market: ${m}%0A🔢 Number: ${n}%0A💰 Amount: ${a}%0A%0A✅ Payment QR bhej de.`;
         window.location.href = `https://wa.me/918199921698?text=${msg}`;
     }
 </script>
